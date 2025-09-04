@@ -20,3 +20,17 @@ console.log("Vacinado: " + vacinado);
 console.log("Especie: " + especiePet);
 console.log("Raça: " + racaPet);
 console.log("Data de Nascimento: " + data_nscmt); 
+
+console.log(nomePet);
+//Atualizando as informações do Pet
+nomePet = "Zena"
+
+//Toda vez que atualizarmos nomePet daqui em diante vem com o novo valor 
+console.log(nomePet);
+
+//--CONST vai dar ERRO se tentarmos atualizar o valor--//
+
+
+idadePet = "5";
+vacinado = "true"
+console.log(idadePet + " é vacinado? " + vacinado);
