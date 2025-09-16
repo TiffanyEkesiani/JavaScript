@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tópico 6: Funções</title>
+    <link rel="stylesheet" href="/css-js/estilo.css">
+</head>
+
+<body>
+    <div class="slideshow-container">
+        <div class="slide">
+            <h1>Aula 6: Organizando o Código com Funções</h1>
+            <p>Criando blocos de código reutilizáveis e inteligentes.</p>
+        </div>
+
+        <div class="slide">
+            <h2>O que é uma Função?</h2>
+            <p>Uma função é um bloco de código nomeado, projetado para realizar uma tarefa específica. É como criar uma
+                nova ferramenta ou um novo comando na linguagem.</p>
+            <b>Definir a Função (Criar a ferramenta):</b>
+            <pre><span class="js-keyword">function</span> saudacao() {
+    <span class="js-keyword">console</span>.log(<span class="js-string">"Olá, mundo!"</span>);
+}</pre>
+            <b>Chamar a Função (Usar a ferramenta):</b>
+            <pre>saudacao(); <span class="js-comment">// Saída: "Olá, mundo!"</span></pre>
+        </div>
+
+        <div class="slide">
+            <h2>Dando "Ingredientes" às Funções: Parâmetros</h2>
+            <p>Parâmetros são variáveis que uma função recebe para poder trabalhar. Eles tornam as funções flexíveis e
+                poderosas.</p>
+            <pre><span class="js-keyword">const</span> nome = <span class="js-string">"Visitante"</span>;</pre>
+            <pre><span class="js-keyword">function</span> saudacaoPersonalizada( <span class="js-comment">nome</span> ) {
+    <span class="js-keyword">console</span>.log(<span class="js-string">`Olá, ${nome}!`</span>);
+}
+
+saudacaoPersonalizada(<span class="js-string">nome</span>);   <span class="js-comment">// Saída: Olá, Visitante!</span>
+saudacaoPersonalizada(<span class="js-string">"Ana"</span>);   <span class="js-comment">// Saída: Olá, Ana!</span>
+saudacaoPersonalizada(<span class="js-string">"Carlos"</span>); <span class="js-comment">// Saída: Olá, Carlos!</span></pre>
+        </div>
+
+        <div class="slide">
+            <h2>Recebendo Resultados: <code>return</code></h2>
+            <p>A palavra-chave <code>return</code> finaliza a execução da função e especifica um valor a ser "devolvido"
+                para quem a chamou.</p>
+            <pre><span class="js-keyword">function</span> somar(a, b) {
+    <span class="js-keyword">return</span> a + b; <span class="js-comment">// Devolve o resultado da soma</span>
+}
+
+<span class="js-keyword">const</span> resultado = somar(<span class="js-number">5</span>, <span class="js-number">3</span>); <span class="js-comment">// resultado agora vale 8</span>
+<span class="js-keyword">console</span>.log(resultado);</pre>
+            <div class="warning">Uma função sem `return` devolve `undefined` por padrão.</div>
+        </div>
+
+        <div class="slide">
+            <h2>Onde as Variáveis Vivem: Escopo</h2>
+            <p>Variáveis declaradas com <code>let</code> e <code>const</code> dentro de uma função (entre
+                <code>{ }</code>) só existem <b>dentro</b> daquela função. Isso é chamado de <b>escopo de bloco</b>.</p>
+            <pre><span class="js-keyword">function</span> calcular() {
+    <span class="js-keyword">const</span> numeroInterno = <span class="js-number">100</span>; <span class="js-comment">// Só existe aqui dentro</span>
+    <span class="js-keyword">console</span>.log(numeroInterno);
+}
+
+calcular(); <span class="js-comment">// Saída: 100</span>
+<span class="js-keyword">console</span>.log(numeroInterno); <span class="js-comment">// ERRO: numeroInterno is not defined</span></pre>
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+     <script src="/css-js/slide.js"></script>
+</body>
+
+</html>

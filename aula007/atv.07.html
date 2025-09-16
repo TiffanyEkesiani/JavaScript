@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade - 07</title>
+    <style>
+
+ /* Corpo da página: ocupa toda a tela e centraliza o card */
+body {
+    height: 100vh;           /* altura 100% da tela */
+    margin: 0;               /* tira a margem padrão do body */
+    display: flex;           /* ativa flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+}
+
+/* Card: caixa com conteúdo alinhado em coluna e centralizado */
+#card {
+    display: flex;           /* ativa flexbox dentro do card */
+    flex-direction: column;  /* organiza conteúdo em coluna */
+    justify-content: center; /* centraliza verticalmente dentro do card */
+    align-items: center;     /* centraliza horizontalmente dentro do card */
+    background-color: rgb(236, 130, 236); /* cor do fundo */
+    box-shadow: 0 2px 6px;
+    width: 300px;            /* largura fixa */
+    padding: 20px;           /* espaço interno */
+    border-radius: 12px;     /* cantos arredondados */
+    text-align: center;      /* texto centralizado */
+    height: 30vh;            /* altura relativa à tela */
+    margin: 0;               /* sem margem */
+}
+
+    </style>
+
+</head>
+<body>
+    <div id="card">
+        <h1 id="nome-perfil">Nome do Perfil</h1>
+        <p id="descricao">Descrição generica do usuario.</p>
+        <a id="link-portifolio" href="#">Link</a>
+    </div>
+    <script src="js"></script>
+</body>
+</html>
